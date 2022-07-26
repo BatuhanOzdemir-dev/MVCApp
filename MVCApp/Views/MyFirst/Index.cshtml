@@ -1,0 +1,25 @@
+﻿@model List<MVCApp.Models.FirstViewModel>
+
+<div>
+    <h1>Yo, this is the first one I've created by hand!</h1>
+    <p>I believe I'll need to work on these HTML brackets now.</p>
+    <hr />
+</div>
+
+<div class="mb-3">
+
+    <ul>
+        @foreach (var job in Model)
+        {
+            @if (job.Experience.Equals(1))
+            {
+                <li>@job.WorkPlace - @job.Experience year.</li>
+            }
+            else
+            {
+                <li>@job.WorkPlace - @job.Experience years.</li>
+            }
+        }
+    </ul>
+
+</div>

@@ -1,0 +1,36 @@
+﻿@model FirstViewModel
+
+<div>
+    <div class="mb-3">
+        <h1>Work Experience</h1>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    State your work and experience in years.
+                </div>
+                <div class="card-body">
+                    <form asp-controller="MyFirst" asp-action="WorkExperienceInput" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Place of work</label>
+                            <input asp-for="WorkPlace" type="text" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Experience (years)</label>
+                            <input asp-for="Experience" type="number" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
